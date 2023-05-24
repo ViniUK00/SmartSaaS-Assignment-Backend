@@ -2,12 +2,18 @@ const express = require('express');
 const mongoose = require("mongoose");
 const router = express.Router();
 require("dotenv").config();
-
+const bodyParser = require('body-parser')
 const app = express();
 
 const indexRoutes = require("./src/Routes/indexRoutes");
+const listingRoute = require("./src/Controllers/ListingCotrollers/ListingCotrollers/getListing")
+
+//Body parser for JSON
+app.use(express.json());
+// app.use(bodyParser.json());
 
 app.use(indexRoutes);
+app.use(listingRoute);
 
 const PORT = 3000;
 
@@ -26,5 +32,3 @@ mongoose.connect(
     useUnifiedTopology: true
   }
 );
-
-
