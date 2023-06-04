@@ -19,7 +19,7 @@ const userDataValidate = (req, res, next) => {
         console.log("Missing required weather field");  
         return res.status(400).json({ error: 'Missing required wearther field' });
     }
-
+ 
     console.log("User input is valid");
     next();
   };

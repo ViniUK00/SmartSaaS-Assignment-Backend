@@ -19,3 +19,4 @@ const getAllWeatherTypeCounts = async (req, res) => {
 }
 
 module.exports = getAllWeatherTypeCounts;
+
