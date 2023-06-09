@@ -5,7 +5,7 @@ const postListing = async ( req,res ) => {
     console.log("Proccess has started", req.body);
 
     const { listing} = req.body;
-const {property_type,listing_url} = listing;
+    const {property_type,listing_url} = listing;
 
 if(!listing){
     return res.status(400).json({

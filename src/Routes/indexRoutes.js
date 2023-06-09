@@ -11,6 +11,7 @@ const postWeather = require('../Controllers/WeatherControllers/postWeather');
 const getWeatherMostPosts = require('..//Controllers/WeatherControllers/getWeatherMostPosts');
 const getUserById = require('../Controllers/ListingCotrollers/UsersControllers/getUserById');
 const getAllWeatherTypeCounts = require('../Controllers/WeatherControllers/getAllWeatherTypeCounts');
+const postUserTimeSeries = require('../Controllers/ListUsersPosts/postUsersPostsTimeSeries');
 
 
 router.get('/', (req, res) => {
@@ -37,4 +38,6 @@ router.get('/users/:id', getUserById);
 
 router.get('/weather/getAllWeatherTypePostCount', getAllWeatherTypeCounts);
 
-module.exports = router;
+router.post('/user/timeseries', postUserTimeSeries); 
+
+module.exports = router; 
