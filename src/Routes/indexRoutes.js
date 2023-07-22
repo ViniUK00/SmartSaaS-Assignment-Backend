@@ -40,4 +40,4 @@ router.get('/weather/getAllWeatherTypePostCount', getAllWeatherTypeCounts);
 
 router.post('/user/timeseries', postUserTimeSeries); 
 
-module.exports = router; 
+module.exports = router;
